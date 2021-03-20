@@ -40,7 +40,7 @@ const Destination = () => {
         const destinationForm = document.getElementById('destination-card');
         loginForm.style.display = 'none';
         destinationForm.style.display = 'block';
-        console.log(loginForm, destinationForm);
+       
     }
         
 
@@ -48,7 +48,7 @@ const Destination = () => {
                 <div className="search-section pt-120">
                     <div className="container">
                         <div className="row">
-                                <div id="pickup-card" className="col-12 col-lg-3">
+                                <div id="pickup-card" className="col-12 col-lg-4">
                               <div className="search p-3">
                                 <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
                                         <div className="form-group">
@@ -71,7 +71,7 @@ const Destination = () => {
                                 </div> 
                                 
                             </div>
-                            <div id="destination-card" className="col-12 col-lg-3 des-card">
+                            <div id="destination-card" className="col-12 col-lg-4 des-card">
                             {rider && <Card className=' my-5'>
                                    <div  className='text-center bg-info mb-5 pt-2'>
                                        <h5>{res.pickFrom}</h5>
@@ -79,7 +79,7 @@ const Destination = () => {
                                        <h5>{res.pickTo}</h5>
                                    </div>
                                     <div className='pickup-image mb-4'>
-                                        <img src={rider.image} alt="" className="img-fluid mx-3" /> <span className="mx-3">{title}</span><span className="mx-3">${rider.rate}</span>
+                                        <img src={rider.image} alt="" className="img-fluid mx-5" /> <span className="mx-4">{title}</span><span className="mx-3">${rider.rate}</span>
                                     </div>
                                 </Card>}
 
