@@ -37,3 +37,9 @@
     background-color: #ce4d02;
     border-color: #ce4d02;
 }
+.ride-name{
+    font-weight: 600;
+}
+.pick-option{
+    text-transform: capitalize;
+}

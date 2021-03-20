@@ -14,6 +14,7 @@ import Destination from './Components/Destination/Destination';
 import Header from './Components/Header/Header';
 import { createContext, useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Footer from './Components/Footer/Footer'
 
 
 export const userContext = createContext();
@@ -46,6 +47,7 @@ function App() {
                 <NoMatch/>
             </Route>
           </Switch>
+          <Footer/>
         </Router>
        </userContext.Provider>
   );

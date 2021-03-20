@@ -79,12 +79,12 @@ const Destination = () => {
                             <div id="destination-card" className="col-12 col-lg-4 des-card">
                             {rider && <Card className=' mb-4 p-3'>
                                    <div  className='bg-color text-white rounded mb-2 p-3'>
-                                       <h5>{res.pickFrom}</h5>
+                                       <h5 className='pick-option'>{res.pickFrom}</h5>
                                        <p className='mb-1'>To</p>
-                                       <h5>{res.pickTo}</h5>
+                                       <h5 className='pick-option'>{res.pickTo}</h5>
                                    </div>
                                     <div className='pickup-image rounded p-3 d-flex align-item-center '>
-                                        <img src={rider.image} alt="" className="img-fluid" /> <span>{title}</span><span >${rider.rate}</span>
+                                        <img src={rider.image} alt="" className="img-fluid" /> <span className='ride-name'>{title}</span><span className='ride-name'>${rider.rate}</span>
                                     </div>
                                 </Card>}
 
