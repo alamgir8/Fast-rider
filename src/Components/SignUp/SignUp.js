@@ -115,9 +115,9 @@ import './SignUp.css'
                                 </Form.Group> */}
                                 <button className='btn btn-warning w-100'>Create an account</button>
                             </form>
-                            <span className='text-center m-auto'>Already have an account? <Link to="/login">Login</Link></span>
-                    </div>
-                            <p className='text-center'>---------------------Or-----------------------</p>
+                            <p className='text-center m-auto pt-4'>Already have an account?  <Link to="/login">Login</Link></p>
+                        </div>
+                            <p className='text-center mt-5'>---------------------Or-----------------------</p>
                         <div className='text-center'>
                             <button className='btn btn-info' onClick={handleGoogleSignIn}>Continue With Google</button>
                         </div>

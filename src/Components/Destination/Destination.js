@@ -37,39 +37,40 @@ const Destination = () => {
 
             return (
                 <div className="search-section pt-120">
-                    <div className='container'>
-                        <div className="search p-3 w-25">
-                            <form className='ship-form' onSubmit={handleSubmit(onSubmit)}>
-                                <div className="form-group">
-                                <label htmlFor="">Pick From</label>
-                                <div>
-                                <input className='form-control' name="pickFrom" ref={register({ required: true })} placeholder='Uttara'/>
-                                {errors.address && <span className='error' >Address is required</span>}
+                    <div className="container">
+                        <div className="row">
+                                <div className="col-12 col-lg-5">
+                                <div className="search p-3 w-25">
+                                <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
+                                        <div className="form-group">
+                                        <label htmlFor="">Pick From</label>
+                                        <div>
+                                            <input className='form-control' name="pickFrom" ref={register({ required: true })} placeholder='Uttara'/> 
+                                            {errors.pickFrom && <span className="error text-danger">Pick From is required</span>}
+                                        </div>
+                                        </div>
+                                        <div className="form-group">
+                                        <label htmlFor="">Pick To</label>
+                                        <div>
+                                            <input className='form-control' name="pickTo" ref={register({ required: true })} placeholder='Mirpur'/> 
+                                            {errors.pickTo && <span className="error text-danger">Pick to is required</span>}
+                                        </div>
+                                        </div>
+                                        <button className="btn btn-primary" type="submit">Submit</button>
+                                    </form>
+                                </div> 
+                                {/* <div>
+                                    <div>
+                                        <img src={rider.image} alt="" className="img-fluid w-25" />
+                                    </div>
+                                </div> */}
                             </div>
-                                </div>
-                            <div className="form-group">
-                            <label htmlFor="">Pick To</label>
-                           <div>
-                           <input className='form-control' name="pickTo" ref={register({ required: true })} placeholder='Mirpur'/>
-                            {errors.phone && <span className='error' >Phone is required</span>}
-                           </div>
+                            <div className="col-12 col-lg-7">
+
                             </div>
-                            <button className='btn btn-primary' type="submit">Submit</button>
-                            </form>  
-                            </div>
-                           <div>
-                             {handleSubmit && <div>
-                               <h4>{res.pickFrom}</h4>
-                               <p>To</p>
-                               <h4>{res.pickTo}</h4>
-                              </div>
-                              }
-                              <div>
-                                  <img src={rider.image} alt="" className='img-fluid w-25'/>
-                              </div>
-                           </div>
                         </div>
-                </div>
+                    </div>
+                    </div>
             );
         };
 

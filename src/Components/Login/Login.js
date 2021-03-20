@@ -95,11 +95,11 @@ export default function Login() {
                     </Form.Group>
                     <p className='text-danger'>{user.error}</p>
                     <button className='btn btn-success w-100'>Login</button>
-                    <span>Don't have an account? </span><Link to="/signup">Sign Up</Link>
+                    <p className='text-center m-auto pt-4'>Don't have an account? <Link to="/signup">Sign Up</Link></p>
                   
                 </form>
          </div>
-            <p className='text-center'>---------------------Or-----------------------</p>
+            <p className='text-center mt-5'>---------------------Or-----------------------</p>
                   <div className='text-center'>
                         <button className='btn btn-info' onClick={handleGoogleSignIn}>Continue With Google</button>
                   </div>

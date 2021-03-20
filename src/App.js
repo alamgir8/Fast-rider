@@ -21,28 +21,28 @@ function App() {
   return (
        <userContext.Provider value={[login, setLogin]}>
           <Router>
-          <Header/>
-          <Switch>
-            <Route path='/home'>
-              <Home/>
-            </Route>
-            <Route path='/login'>
-              <Login/>
-            </Route>
-            <Route path='/signup'>
-              <SignUp/>
-            </Route>
-            <PrivateRoute path='/destination/:title'>
-              <Destination/>
-            </PrivateRoute>
-            <PrivateRoute path='/destination'>
-              <Destination/>
-            </PrivateRoute>
-            <Route exact path='/'>
-              <Home/>
-            </Route>
-            <Route path='*'>
-              <NoMatch/>
+            <Header/>
+              <Switch>
+                <Route path='/home'>
+                    <Home/>
+                </Route>
+                <Route path='/login'>
+                    <Login/>
+                </Route>
+                <Route path='/signup'>
+                  <SignUp/>
+              </Route>
+              <PrivateRoute path='/destination/:title'>
+                  <Destination/>
+              </PrivateRoute>
+              <PrivateRoute path='/destination'>
+                    <Destination/>
+              </PrivateRoute>
+               <Route exact path='/'>
+                 <Home/>
+              </Route>
+              <Route path='*'>
+                <NoMatch/>
             </Route>
           </Switch>
         </Router>
