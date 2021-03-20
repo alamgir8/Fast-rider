@@ -11,3 +11,7 @@ Some Feature of this site:
 4. I make some fakeData for use home component rider with image title and id
 
 5. Use Bootstrap for design and also used react hook form in destination form.
+
+6. If going in destination route without selection ride option then it will not show destination card after searching.
+
+7. Added google map by iframe, it works properly.

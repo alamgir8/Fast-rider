@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import fakeData from '../FakeData/FakeData.json'
 import './Destination.css'
 import { Card } from 'react-bootstrap';
+import Map from '../Map/Map';
 
 
 
@@ -84,10 +85,13 @@ const Destination = () => {
                                 </Card>}
 
                             </div>
+                            <div className="col-12 col-lg-4">
+                                <div className="google-map">
+                                    <Map/>
+                                </div>
                         </div>
-                        <div className="col-12 col-lg-6">
-                        <div id="example"></div>
                         </div>
+                       
                     </div>
                     </div>
                     
