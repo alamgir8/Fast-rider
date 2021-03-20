@@ -1,24 +1,17 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Riders.css'
 
 const Rider = (props) => {
     const {id, image, title} = props.rider;
     return (
-        <div className='col-12 col-lg-3 col-md-3'>
-            <Card className='my-5'>
-                <Card.Img src={image} alt='rider' className='img-fluid w-75 m-auto p-3'/>
-                <Card.Body>
-                    <Card.Title className='text-center'>{title}</Card.Title>
-                    <Card.Text>
-                        Enjoy fast speed ride with this {title}
-                    </Card.Text>
-                    
-                        <Link to={`/destination/${id}`}>Ride with {title}</Link>
-                    
-                   
-                </Card.Body>
-                </Card>
+        <div className='col-12 col-lg-3 col-md-3 my-3'>
+            <Link to={`/destination/${title}`} className='text-white m-auto'>
+                <div className='custom-card'>
+                    <img src={image} alt='rider' className='img-fluid m-auto p-4 pt-0'/>
+                    <h2 className='text-dark text-center'>{title}</h2>  
+                </div>
+            </Link>
         </div>
     );
 };

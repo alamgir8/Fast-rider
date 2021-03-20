@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { userContext } from '../../App';
 import firebaseConfig from '../../firebase.config';
+import './SignUp.css'
 
 
 
@@ -95,7 +96,8 @@ import firebaseConfig from '../../firebase.config';
                    }
 
             return (
-                    <div className="container">
+                    <div className="sign-up-section">
+                            <div className="container">
                         <div className="login m-auto mt-5 p-5">
                             <form onSubmit={handleSubmit}>
                                 <Form.Group >
@@ -121,6 +123,7 @@ import firebaseConfig from '../../firebase.config';
                         </div>
                        
                 </div>
+                    </div>
             );
 };
 

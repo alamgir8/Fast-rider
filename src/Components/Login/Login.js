@@ -82,8 +82,9 @@ export default function Login() {
    
 
   return (
-        <div className="container">
-            <div className="login m-auto mt-5 p-5">
+        <div className="login-section">
+              <div className="container">
+                <div className="login m-auto mt-5 p-5">
              
                 <form onSubmit={handleSubmit}>
                     <Form.Group >
@@ -102,6 +103,7 @@ export default function Login() {
                   <div className='text-center'>
                         <button className='btn btn-info' onClick={handleGoogleSignIn}>Continue With Google</button>
                   </div>
-     </div>
+          </div>
+        </div>
   );
 }

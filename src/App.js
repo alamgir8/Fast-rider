@@ -26,21 +26,21 @@ function App() {
             <Route path='/home'>
               <Home/>
             </Route>
-            <Route exact path='/'>
-              <Home/>
-            </Route>
-            <Route exact path='/login'>
+            <Route path='/login'>
               <Login/>
             </Route>
             <Route path='/signup'>
               <SignUp/>
             </Route>
-            <PrivateRoute path='/destination/:riderId'>
+            <PrivateRoute path='/destination/:title'>
               <Destination/>
             </PrivateRoute>
             <PrivateRoute path='/destination'>
               <Destination/>
             </PrivateRoute>
+            <Route exact path='/'>
+              <Home/>
+            </Route>
             <Route path='*'>
               <NoMatch/>
             </Route>

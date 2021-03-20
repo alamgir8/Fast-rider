@@ -7,3 +7,6 @@
     box-shadow: 5px 5px 5px 5px lightgray;
     border-radius: 5px;
 }
+.login-section{
+    padding: 100px 0 !important;
+}

@@ -11,7 +11,7 @@ const Home = () => {
         setRiders(fakeData);
     }, [])
     return (
-        <div className="hero-section">
+        <div className="hero-section pt-120">
              <div className='container'>
                <div className="row">
                {
