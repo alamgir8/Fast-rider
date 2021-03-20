@@ -6,6 +6,7 @@ import './Destination.css'
 import { Card } from 'react-bootstrap';
 
 
+
 const Destination = () => {
         const {title} = useParams();
         const [rider, setRider] = useState([]);
@@ -34,14 +35,20 @@ const Destination = () => {
            
             
         };
-    
+    const setLogin = () => {
+        const loginForm = document.getElementById('pickup-card');
+        const destinationForm = document.getElementById('destination-card');
+        loginForm.style.display = 'none';
+        destinationForm.style.display = 'block';
+        console.log(loginForm, destinationForm);
+    }
         
 
             return (
                 <div className="search-section pt-120">
                     <div className="container">
                         <div className="row">
-                                <div className="col-12 col-lg-3">
+                                <div id="pickup-card" className="col-12 col-lg-3">
                               <div className="search p-3">
                                 <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
                                         <div className="form-group">
@@ -58,13 +65,13 @@ const Destination = () => {
                                             {errors.pickTo && <span className="error text-danger">Pick to is required</span>}
                                         </div>
                                         </div>
-                                        <button  className="btn btn-primary" type="submit" >Submit</button>
+                                        <button onClick={() => setLogin()} className="btn btn-primary" type="submit" >Submit</button>
                                     </form>
-                                   
+                                    
                                 </div> 
                                 
                             </div>
-                            <div className="col-12 col-lg-3">
+                            <div id="destination-card" className="col-12 col-lg-3 des-card">
                             {rider && <Card className=' my-5'>
                                    <div  className='text-center bg-info mb-5 pt-2'>
                                        <h5>{res.pickFrom}</h5>
@@ -79,7 +86,7 @@ const Destination = () => {
                             </div>
                         </div>
                         <div className="col-12 col-lg-6">
-                           
+                        <div id="example"></div>
                         </div>
                     </div>
                     </div>

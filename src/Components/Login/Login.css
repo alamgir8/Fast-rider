@@ -1,9 +1,5 @@
 .login{
     width: 500px;
-    box-shadow: 5px 5px 7px gray;
+    box-shadow: 0 1rem 3rem rgb(29 41 63 / 18%);
     border-radius: 5px;
 }
-.login-section{
-    padding: 250px 0;
-}
-  

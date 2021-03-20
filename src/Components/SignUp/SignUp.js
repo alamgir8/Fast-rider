@@ -97,7 +97,7 @@ import './SignUp.css'
 
             return (
                     <div className="sign-up-section">
-                            <div className="container">
+                        <div className="container">
                         <div className="login m-auto mt-5 p-5">
                             <form onSubmit={handleSubmit}>
                                 <Form.Group >
