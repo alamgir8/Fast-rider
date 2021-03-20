@@ -1,17 +1,21 @@
 [{
     "id": 1,
     "title": "Bike",
-    "image": "https://i.postimg.cc/0QL5DC8b/bike.png"
+    "image": "https://i.postimg.cc/0QL5DC8b/bike.png",
+    "rate": 40
   }, {
     "id": 2,
     "title": "Car",
-    "image": "https://i.postimg.cc/MKJKGtPL/car.png"
+    "image": "https://i.postimg.cc/MKJKGtPL/car.png",
+    "rate": 50
   }, {
     "id": 3,
     "title": "Bus",
-    "image": "https://i.postimg.cc/sx7jcZXK/bus.png"
+    "image": "https://i.postimg.cc/sx7jcZXK/bus.png",
+    "rate": 30
   }, {
     "id": 4,
     "title": "Train",
-    "image": "https://i.postimg.cc/h4dtgNrx/train.png"
+    "image": "https://i.postimg.cc/h4dtgNrx/train.png",
+    "rate": 20
   }]

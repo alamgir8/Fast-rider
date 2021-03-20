@@ -3,16 +3,17 @@ import { useParams } from 'react-router';
 import { useForm } from 'react-hook-form';
 import fakeData from '../FakeData/FakeData.json'
 import './Destination.css'
+import { Card } from 'react-bootstrap';
+
 
 const Destination = () => {
         const {title} = useParams();
         const [rider, setRider] = useState([]);
-        const [res, setRes] = useState();
+        const [res, setRes] = useState({});
         useEffect(() => {
             let result = fakeData.find(element => element.title === title);
            setRider(result)
-           console.log(result);
-           
+          
                 
         }, []);
 
@@ -25,22 +26,23 @@ const Destination = () => {
         //     e.preventDefault();
         // }
         const { register, handleSubmit, errors } = useForm();
+        const submit = false;
 
         const onSubmit = data => {
+            const submit = true;
             setRes(data)
-            console.log(data);
-            console.log(rider);
+           
             
         };
-     
     
+        
 
             return (
                 <div className="search-section pt-120">
                     <div className="container">
                         <div className="row">
-                                <div className="col-12 col-lg-5">
-                                <div className="search p-3 w-25">
+                                <div className="col-12 col-lg-3">
+                              <div className="search p-3">
                                 <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
                                         <div className="form-group">
                                         <label htmlFor="">Pick From</label>
@@ -56,22 +58,34 @@ const Destination = () => {
                                             {errors.pickTo && <span className="error text-danger">Pick to is required</span>}
                                         </div>
                                         </div>
-                                        <button className="btn btn-primary" type="submit">Submit</button>
+                                        <button  className="btn btn-primary" type="submit" >Submit</button>
                                     </form>
+                                   
                                 </div> 
-                                {/* <div>
-                                    <div>
-                                        <img src={rider.image} alt="" className="img-fluid w-25" />
-                                    </div>
-                                </div> */}
+                                
                             </div>
-                            <div className="col-12 col-lg-7">
+                            <div className="col-12 col-lg-3">
+                            {rider && <Card className=' my-5'>
+                                   <div  className='text-center bg-info mb-5 pt-2'>
+                                       <h5>{res.pickFrom}</h5>
+                                       <p >To</p>
+                                       <h5>{res.pickTo}</h5>
+                                   </div>
+                                    <div className='pickup-image mb-4'>
+                                        <img src={rider.image} alt="" className="img-fluid mx-3" /> <span className="mx-3">{title}</span><span className="mx-3">${rider.rate}</span>
+                                    </div>
+                                </Card>}
 
                             </div>
                         </div>
+                        <div className="col-12 col-lg-6">
+                           
+                        </div>
                     </div>
                     </div>
+                    
             );
+           
         };
 
         export default Destination;
