@@ -41,6 +41,10 @@ const Destination = () => {
         const destinationForm = document.getElementById('destination-card');
         loginForm.style.display = 'none';
         destinationForm.style.display = 'block';
+        if (!rider) {
+           alert('sorry you are not select ride option');
+                  
+        }
        
     }
         
