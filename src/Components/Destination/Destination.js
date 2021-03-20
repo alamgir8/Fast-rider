@@ -50,42 +50,42 @@ const Destination = () => {
                     <div className="container">
                         <div className="row">
                                 <div id="pickup-card" className="col-12 col-lg-4">
-                              <div className="search p-3">
+                              <Card className="search p-3 mb-4">
                                 <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
                                         <div className="form-group">
                                         <label htmlFor="">Pick From</label>
                                         <div>
-                                            <input className='form-control' name="pickFrom" ref={register({ required: true })} placeholder='Uttara'/> 
+                                            <input className='form-control' name="pickFrom" ref={register({ required: true })} placeholder='Uttara' required/> 
                                             {errors.pickFrom && <span className="error text-danger">Pick From is required</span>}
                                         </div>
                                         </div>
                                         <div className="form-group">
                                         <label htmlFor="">Pick To</label>
                                         <div>
-                                            <input className='form-control' name="pickTo" ref={register({ required: true })} placeholder='Mirpur'/> 
+                                            <input className='form-control' name="pickTo" ref={register({ required: true })} placeholder='Mirpur' required/> 
                                             {errors.pickTo && <span className="error text-danger">Pick to is required</span>}
                                         </div>
                                         </div>
-                                        <button onClick={() => setLogin()} className="btn btn-primary" type="submit" >Submit</button>
+                                        <button onClick={() => setLogin()} className="btn btn-primary button" type="submit" >Submit</button>
                                     </form>
                                     
-                                </div> 
+                                </Card> 
                                 
                             </div>
                             <div id="destination-card" className="col-12 col-lg-4 des-card">
-                            {rider && <Card className=' my-5'>
-                                   <div  className='text-center bg-info mb-5 pt-2'>
+                            {rider && <Card className=' mb-4 p-3'>
+                                   <div  className='bg-color text-white rounded mb-2 p-3'>
                                        <h5>{res.pickFrom}</h5>
-                                       <p >To</p>
+                                       <p className='mb-1'>To</p>
                                        <h5>{res.pickTo}</h5>
                                    </div>
-                                    <div className='pickup-image mb-4'>
-                                        <img src={rider.image} alt="" className="img-fluid mx-5" /> <span className="mx-4">{title}</span><span className="mx-3">${rider.rate}</span>
+                                    <div className='pickup-image rounded p-3 d-flex align-item-center '>
+                                        <img src={rider.image} alt="" className="img-fluid" /> <span>{title}</span><span >${rider.rate}</span>
                                     </div>
                                 </Card>}
 
                             </div>
-                            <div className="col-12 col-lg-4">
+                            <div className="col-12 col-lg-8">
                                 <div className="google-map">
                                     <Map/>
                                 </div>

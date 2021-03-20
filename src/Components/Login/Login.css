@@ -3,3 +3,14 @@
     box-shadow: 0 1rem 3rem rgb(29 41 63 / 18%);
     border-radius: 5px;
 }
+
+.google-login-button{
+    background-color: #ff1744 !important;
+}
+.fb-login-button{
+    background-color: #304ffe !important;
+}
+.or{
+    font-weight: 500;
+    font-size: 16px;
+}

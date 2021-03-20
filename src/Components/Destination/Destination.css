@@ -1,13 +1,13 @@
-.search{
+/* .search{
     box-shadow: 5px 5px 5px 5px lightgray;
     border-radius: 5px;
     
-}
+} */
 
-.booking-card{
+/* .booking-card{
     box-shadow: 5px 5px 5px 5px lightgray;
     border-radius: 5px;
-}
+} */
 .login-section{
     padding: 100px 0 !important;
 }
@@ -17,4 +17,23 @@
 .des-card{
     display: none;
 }
-
+.form-group label{
+    font-weight: 600;
+    font-size: 15px;
+}
+.bg-color{
+    background-color: #fe7626;
+}
+.pickup-image{
+    background-color: #f2f2f2;
+    justify-content: space-around;
+    
+}
+.btn-primary.button{
+    background-color: #fe7626;
+    border-color: #fe7626;
+}
+.btn-primary.button:hover{
+    background-color: #ce4d02;
+    border-color: #ce4d02;
+}

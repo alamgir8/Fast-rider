@@ -2,12 +2,12 @@
     background: url(../../img/body-bg.jpg)no-repeat center center / cover;
     position: relative;
     display: block;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
  .pt-120{
-     padding-top: 150px;
+     padding: 150px 0;
  } 
  .pb-100{
     padding-bottom: 100px;

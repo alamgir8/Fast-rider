@@ -9,7 +9,7 @@ const Header = () => {
         const [login, setLogin] = useContext(userContext);
        
     return (
-        <section className="header sticky-top">
+        <section className="header">
         <nav id="navbar" className="navbar text-center navbar-expand-md mb-5">
             <div className="container">
                 

@@ -15,3 +15,5 @@ Some Feature of this site:
 6. If going in destination route without selection ride option then it will not show destination card after searching.
 
 7. Added google map by iframe, it works properly.
+
+8. 

@@ -7,6 +7,8 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import { userContext } from '../../App';
 import firebaseConfig from '../../firebase.config';
 import './SignUp.css'
+import fbLogo from '../../img/Facebook.png';
+import googleLogo from '../../img/goggle.jpg'
 
 
 
@@ -41,6 +43,23 @@ import './SignUp.css'
                         });
                     }
 
+                    const fbProvider = new firebase.auth.FacebookAuthProvider();
+                    const handleFbSignIn = () => {
+                      firebase
+                      .auth()
+                      .signInWithPopup(fbProvider)
+                      .then((res) => {
+                        const user = res.user;
+                        setLogin(user);
+                        history.replace(from);
+                                   
+                        }).catch((error) => {
+                          const errorMessage = error.message;
+                          const email = error.email;
+                         console.log(errorMessage, email);
+                        });
+                  
+                    }
                 
                 
                 const handleBlur = (e) => {
@@ -98,7 +117,7 @@ import './SignUp.css'
             return (
                     <div className="sign-up-section">
                         <div className="container">
-                        <div className="login m-auto mt-5 p-5">
+                        <div className="login bg-white m-auto mt-5 p-5">
                             <form onSubmit={handleSubmit}>
                                 <Form.Group >
                                     <Form.Control  onBlur={handleBlur} name='name' type="text" placeholder='Username' required/>
@@ -117,9 +136,12 @@ import './SignUp.css'
                             </form>
                             <p className='text-center m-auto pt-4'>Already have an account?  <Link to="/login">Login</Link></p>
                         </div>
-                            <p className='text-center mt-5'>---------------------Or-----------------------</p>
+                            <p className='text-center mt-5 or'>---------------------Or-----------------------</p>
                         <div className='text-center'>
-                            <button className='btn btn-info' onClick={handleGoogleSignIn}>Continue With Google</button>
+                            <button className='google-login-button btn text-white' onClick={handleGoogleSignIn}><img src={googleLogo} alt=""/> Continue With Google</button>
+                        </div>
+                        <div className='text-center py-3'>
+                            <button className='btn fb-login-button text-white' onClick={handleFbSignIn}><img src={fbLogo} alt="fbLogo"/> Continue With Facebook</button>
                         </div>
                        
                 </div>
