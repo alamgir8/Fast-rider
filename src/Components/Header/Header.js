@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { userContext } from '../../App';
 import './Header.css';
 import logo from '../../img/logo.png'

@@ -101,7 +101,7 @@ export default function Login() {
    
 
   return (
-        <div className="login-section ">
+        <div className="login-section">
               <div className="container">
                 <div className="login bg-white m-auto mt-5 p-5">
              
@@ -120,7 +120,7 @@ export default function Login() {
          </div>
             <p className='text-center mt-5 or'>---------------------Or-----------------------</p>
                   <div className='text-center'>
-                        <button className='google-login-button btn text-white' onClick={handleGoogleSignIn}><img src={googleLogo} alt=""/> Continue With Google</button>
+                        <button className='google-login-button btn text-white' onClick={handleGoogleSignIn}><img src={googleLogo} alt="goggleLogo"/> Continue With Google</button>
                   </div>
                   <div className='text-center py-3'>
                         <button className='btn fb-login-button text-white' onClick={handleFbSignIn}><img src={fbLogo} alt="fbLogo"/> Continue With Facebook</button>

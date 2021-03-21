@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Riders.css'
 
 const Rider = (props) => {
-    const {id, image, title} = props.rider;
+    const {image, title} = props.rider;
     return (
         <div className='col-12 col-lg-3 col-md-3 my-3'>
             <Link to={`/destination/${title}`} className='text-white m-auto'>

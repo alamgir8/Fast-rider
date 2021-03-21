@@ -21,6 +21,9 @@ const Destination = () => {
 
         // const handleBlur = (e) =>{
         //     console.log(e.target.name, e.target.value);
+        //     if (e.target.value = '') {
+        //         console.log('you should input this field');
+        //     }
         // }
 
         // const handleSubmit = (e) => {
@@ -33,21 +36,29 @@ const Destination = () => {
         const onSubmit = data => {
             const submit = true;
             setRes(data)
+            const loginForm = document.getElementById('pickup-card');
+            const destinationForm = document.getElementById('destination-card');
+                    
+            if (!rider) {
+            alert('please select ride option like {bike, car, bus or train}');
+            loginForm.style.display = 'block';
+            destinationForm.style.display = 'none';
+                    
+            }
+            else{
+                loginForm.style.display = 'none';
+                destinationForm.style.display = 'block';
+            }
            
-            
+                               
         };
+
     const setLogin = () => {
-        const loginForm = document.getElementById('pickup-card');
-        const destinationForm = document.getElementById('destination-card');
-        loginForm.style.display = 'none';
-        destinationForm.style.display = 'block';
-        if (!rider) {
-           alert('sorry you are not select ride option');
-                  
-        }
-       
-    }
         
+    }
+  
+    
+    
 
             return (
                 <div className="search-section pt-120">
@@ -70,19 +81,37 @@ const Destination = () => {
                                             {errors.pickTo && <span className="error text-danger">Pick to is required</span>}
                                         </div>
                                         </div>
-                                        <button onClick={() => setLogin()} className="btn btn-primary button" type="submit" >Submit</button>
+                                        <div className="form-group">
+                                        <label htmlFor="">Date</label>
+                                        <div>
+                                            <input className='form-control' type='date' name="date" ref={register({ required: true })} required/> 
+                                            {errors.pickTo && <span className="error text-danger">Date is required</span>}
+                                        </div>
+                                        </div>
+                                        <button onClick={setLogin} className="btn btn-primary button"  id='submit-button' type="submit">Submit</button>
                                     </form>
                                     
                                 </Card> 
                                 
                             </div>
                             <div id="destination-card" className="col-12 col-lg-4 des-card">
-                            {rider && <Card className=' mb-4 p-3'>
-                                   <div  className='bg-color text-white rounded mb-2 p-3'>
-                                       <h5 className='pick-option'>{res.pickFrom}</h5>
-                                       <p className='mb-1'>To</p>
-                                       <h5 className='pick-option'>{res.pickTo}</h5>
-                                   </div>
+                            {rider && <Card className=' mb-4 p-3 '>
+                                        <div className='bg-color text-white rounded mb-2'>
+                                        <div className="row">
+                                        <div className="col-12 col-lg-6 col-md-6">
+                                            <div  className=' mb-2 p-3'>
+                                                <h5 className='pick-option'>{res.pickFrom}</h5>
+                                                <p className='mb-1'>To</p>
+                                                <h5 className='pick-option'>{res.pickTo}</h5>
+                                            </div>
+                                        </div>
+                                        <div className="col-12 col-lg-6 col-md-6">
+                                            <div className='m-auto align-item-center justify-content-center'>
+                                            <h6>{res.date}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        </div>
                                     <div className='pickup-image rounded p-3 d-flex align-item-center '>
                                         <img src={rider.image} alt="" className="img-fluid" /> <span className='ride-name'>{title}</span><span className='ride-name'>${rider.rate}</span>
                                     </div>
