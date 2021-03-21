@@ -123,7 +123,7 @@ import googleLogo from '../../img/goggle.jpg';
                                     <Form.Control  onBlur={handleBlur} name='name' type="text" placeholder='Username' required/>
                                 </Form.Group>
                                 <Form.Group >
-                                    <Form.Control  onBlur={handleBlur} name='email' type="email" className='mainLoginInput' placeholder="Email" required/>
+                                    <Form.Control  onBlur={handleBlur} name='email' type="email" placeholder="Email" required/>
                                 </Form.Group>
                                  <p className='text-danger'>{user.error}</p>
                                 <Form.Group >
