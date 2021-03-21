@@ -1,4 +1,4 @@
-My website name : fast-rider-official
+My website name : fast-rider
 
 Some Feature of this site: 
 
@@ -37,4 +37,4 @@ Some Feature of this site:
 
 
 
-...........................Thanks :) ...........................
+...............................................................Thanks :) .....................................................................
