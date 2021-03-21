@@ -43,3 +43,7 @@
 .pick-option{
     text-transform: capitalize;
 }
+
+.align-item{
+    align-items: center;
+}

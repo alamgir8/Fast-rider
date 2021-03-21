@@ -6,3 +6,21 @@
 #navbar img{
     width: 100px;
 }
+
+ul li a{
+    color: black;
+    text-decoration: none;
+}
+ul li{
+    font-weight: 400 !important;
+}
+.login-button{
+    background-color: rgb(253, 34, 89);
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 10px  9px 10px !important;
+    margin-top: 5px;
+}
+.login-button:hover{
+    color: rgb(0, 0, 0);
+}

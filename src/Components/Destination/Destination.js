@@ -97,7 +97,7 @@ const Destination = () => {
                             <div id="destination-card" className="col-12 col-lg-4 des-card">
                             {rider && <Card className=' mb-4 p-3 '>
                                         <div className='bg-color text-white rounded mb-2'>
-                                        <div className="row">
+                                        <div className="row align-item">
                                         <div className="col-12 col-lg-6 col-md-6">
                                             <div  className=' mb-2 p-3'>
                                                 <h5 className='pick-option'>{res.pickFrom}</h5>
@@ -106,7 +106,7 @@ const Destination = () => {
                                             </div>
                                         </div>
                                         <div className="col-12 col-lg-6 col-md-6">
-                                            <div className='m-auto align-item-center justify-content-center'>
+                                            <div className='m-auto'>
                                             <h6>{res.date}</h6>
                                             </div>
                                         </div>
