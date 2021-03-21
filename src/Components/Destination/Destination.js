@@ -88,7 +88,7 @@ const Destination = () => {
                                             {errors.pickTo && <span className="error text-danger">Date is required</span>}
                                         </div>
                                         </div>
-                                        <button onClick={setLogin} className="btn btn-primary button"  id='submit-button' type="submit">Submit</button>
+                                        <button onClick={setLogin} className="btn btn-primary button w-100"  id='submit-button' type="submit">Submit</button>
                                     </form>
                                     
                                 </Card> 
