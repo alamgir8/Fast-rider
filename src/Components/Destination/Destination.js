@@ -19,17 +19,7 @@ const Destination = () => {
                 
         }, []);
 
-        // const handleBlur = (e) =>{
-        //     console.log(e.target.name, e.target.value);
-        //     if (e.target.value = '') {
-        //         console.log('you should input this field');
-        //     }
-        // }
-
-        // const handleSubmit = (e) => {
-        //     console.log(e.target.value);
-        //     e.preventDefault();
-        // }
+       
         const { register, handleSubmit, errors } = useForm();
         const submit = false;
 
@@ -53,13 +43,7 @@ const Destination = () => {
                                
         };
 
-    const setLogin = () => {
-        
-    }
-  
     
-    
-
             return (
                 <div className="search-section pt-120">
                     <div className="container">
@@ -88,7 +72,7 @@ const Destination = () => {
                                             {errors.pickTo && <span className="error text-danger">Date is required</span>}
                                         </div>
                                         </div>
-                                        <button onClick={setLogin} className="btn btn-primary button w-100"  id='submit-button' type="submit">Submit</button>
+                                        <button className="btn btn-primary button w-100"  id='submit-button' type="submit">Submit</button>
                                     </form>
                                     
                                 </Card> 

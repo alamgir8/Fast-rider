@@ -9,3 +9,9 @@
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
 }
+.custom-card{
+    transition:transform 0.4s ease-in-out;
+    }
+.custom-card:hover {
+      transform: translateY(-10px);
+    }

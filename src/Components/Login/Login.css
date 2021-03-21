@@ -7,8 +7,14 @@
 .google-login-button{
     background-color: #ff1744 !important;
 }
+.google-login-button:hover{
+    background-color: #db002c !important;
+}
 .fb-login-button{
     background-color: #304ffe !important;
+}
+.fb-login-button:hover{
+    background-color: #0021df !important;
 }
 .or{
     font-weight: 500;

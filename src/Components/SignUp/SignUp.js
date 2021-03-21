@@ -8,7 +8,8 @@ import { userContext } from '../../App';
 import firebaseConfig from '../../firebase.config';
 import './SignUp.css'
 import fbLogo from '../../img/Facebook.png';
-import googleLogo from '../../img/goggle.jpg'
+import googleLogo from '../../img/goggle.jpg';
+
 
 
 
@@ -60,7 +61,6 @@ import googleLogo from '../../img/goggle.jpg'
                         });
                   
                     }
-                
                 
                 const handleBlur = (e) => {
                     let isFormFieldValid = true;
@@ -123,14 +123,15 @@ import googleLogo from '../../img/goggle.jpg'
                                     <Form.Control  onBlur={handleBlur} name='name' type="text" placeholder='Username' required/>
                                 </Form.Group>
                                 <Form.Group >
-                                    <Form.Control  onBlur={handleBlur} name='email' type="email" placeholder='Email' required/>
+                                    <Form.Control  onBlur={handleBlur} name='email' type="email" className='mainLoginInput' placeholder="Email" required/>
                                 </Form.Group>
                                  <p className='text-danger'>{user.error}</p>
                                 <Form.Group >
+                                <span class="icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
                                     <Form.Control  onBlur={handleBlur} name='password' type="password" placeholder='Password' required/>
                                 </Form.Group>
                                 {/* <Form.Group >
-                                    <Form.Control  onBlur={handleBlur} name='password' type="password" placeholder='Confirm password' required/>
+                                    <Form.Control  onBlur={handleBlur} name='confirm-password' type="password" placeholder='Confirm password' required/>
                                 </Form.Group> */}
                                 <button className='btn btn-warning w-100'>Create an account</button>
                             </form>

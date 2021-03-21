@@ -111,18 +111,18 @@ export default function Login() {
                         <Form.Group >
                         <Form.Control  onBlur={handleBlur} name='password'  type="password" placeholder='Password' required/>
                     </Form.Group>
-                    <p className='text-danger'>{user.error}</p>
-                    <button className='btn btn-success w-100'>Login</button>
-                    <p className='text-center m-auto pt-4'>Don't have an account? <Link to="/signup">Sign Up</Link></p>
+                        <p className='text-danger'>{user.error}</p>
+                        <button className='btn btn-success w-100'>Login</button>
+                     <p className='text-center m-auto pt-4'>Don't have an account? <Link to="/signup">Sign Up</Link></p>
                   
                 </form>
          </div>
             <p className='text-center mt-5 or'>---------------------Or-----------------------</p>
                   <div className='text-center'>
-                        <button className='google-login-button btn text-white' onClick={handleGoogleSignIn}><img src={googleLogo} alt="goggleLogo"/> Continue With Google</button>
+                      <button className='google-login-button btn text-white' onClick={handleGoogleSignIn}><img src={googleLogo} alt="goggleLogo"/> Continue With Google</button>
                   </div>
                   <div className='text-center py-3'>
-                        <button className='btn fb-login-button text-white' onClick={handleFbSignIn}><img src={fbLogo} alt="fbLogo"/> Continue With Facebook</button>
+                      <button className='btn fb-login-button text-white' onClick={handleFbSignIn}><img src={fbLogo} alt="fbLogo"/> Continue With Facebook</button>
                   </div>
           </div>
         </div>

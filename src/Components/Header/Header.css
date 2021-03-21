@@ -13,12 +13,13 @@ ul li a{
 }
 
 .login-button{
-    background-color: rgb(253, 7, 68);
+    background-color: rgb(252, 34, 89);
     color: #fff;
     border-radius: 5px;
     padding: 5px 10px  9px 10px !important;
     margin-top: 3px;
 }
 .login-button:hover{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    background-color: rgb(221, 0, 55);
 }
