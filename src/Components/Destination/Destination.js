@@ -107,7 +107,8 @@ const Destination = () => {
                                         </div>
                                         <div className="col-12 col-lg-6 col-md-6">
                                             <div className='m-auto'>
-                                            <h6>{res.date}</h6>
+                                                <h5>Date</h5>
+                                                <h6>{res.date}</h6>
                                             </div>
                                         </div>
                                     </div>
