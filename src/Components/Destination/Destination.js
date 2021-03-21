@@ -113,7 +113,7 @@ const Destination = () => {
                                         </div>
                                     </div>
                                         </div>
-                                    <div className='pickup-image rounded p-3 d-flex align-item-center '>
+                                    <div className='pickup-image rounded p-3 d-flex align-item-center mt-3'>
                                         <img src={rider.image} alt="" className="img-fluid" /> <span className='ride-name'>{title}</span><span className='ride-name'>${rider.rate}</span>
                                     </div>
                                 </Card>}
