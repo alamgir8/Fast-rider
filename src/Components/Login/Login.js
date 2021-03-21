@@ -84,7 +84,6 @@ export default function Login() {
             setLogin(user);
             setUser(user);
             history.replace(from);
-            console.log(user.displayName);
        
         })
         

@@ -9,7 +9,7 @@ const Footer = () => {
               <div className="row">
                 <div className="col-lg-6 col-md-6">
                   <div className="py-5">
-                    <a href="#footer"><h2 className="text-white logo-name">Fast Rider</h2></a>
+                    <a href="#footer" className="text-white logo-name h2">Fast Rider</a>
                   </div>
                 <div className="text-white">
                   <p className="pt-2">Uttara, Sector-13, Dhaka-1230</p>
@@ -20,19 +20,20 @@ const Footer = () => {
               </div>
               <div className="col-lg-6 col-md-6">
                   <div className="text-white pt-5 mt-5 ">
-                    <p>
-                      <a href="#footer" className="text-white">About Us</a>
-                    </p>
-                    <p>
-                      <a href="#footer" className="text-white">Success</a>
-                    </p>
-                    <p>
-                      <a href="#footer" className="text-white">Terms and Condition</a>
-                    </p>
-                    <p>
-                      <a href="#footer" className="text-white">Privacy Policy</a>
-                    </p>
-                    
+                      <ul>
+                          <li>
+                            <a href="#footer" className="text-white ">About Us</a>
+                          </li>
+                        <li>
+                            <a href="#footer" className="text-white">Success</a>
+                        </li>
+                        <li>
+                            <a href="#footer" className="text-white">Terms and Condition</a>
+                        </li>
+                        <li>
+                            <a href="#footer" className="text-white">Privacy Policy</a>
+                        </li>
+                      </ul>                   
                   </div>
               </div>
             
